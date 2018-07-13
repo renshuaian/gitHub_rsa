@@ -1,0 +1,42 @@
+			.parent{
+				width:1300px;
+				height:1000px;
+				background-image:url(../image/background.jpg);
+				position:relative;
+			}
+
+			.axe{
+				position:absolute;
+				top:100px;
+				left:300px;
+				transform:rotate(-20deg);
+				transition-duration:2s;
+				transform-origin:bottom left;
+			}
+			.mushroom{
+				position:absolute;
+				left:750px;
+				top:350px;
+				transition:0.5s 0.7s;
+				transform-origin:bottom right;
+			}
+			.notice{
+				position:absolute;
+				left:900px;
+				top:400px;
+				color:red;
+				font-size:18px;
+				font-weight:bold;
+				backface-visibility:hidden;
+				transform:rotatey(180deg);
+				transition:1s 0.7s;
+			}
+			button:active + .axe{
+				transform:rotate(45deg);
+			}
+			button:active ~ .mushroom{
+				transform:scale(0.5) rotate(15deg);
+			}
+			button:active ~ .notice{
+				transform:rotatey(0deg);
+			}
